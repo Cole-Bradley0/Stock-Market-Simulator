@@ -78,7 +78,7 @@ while days.empty() == False:
     if not firstDay:
         #---Strategy---
 
-        # Days only
+        # Nights only
         currentCash = currentCash * (1+((day.Open/previousClose)-1)*leverage)
 
         # Update Null Strategy

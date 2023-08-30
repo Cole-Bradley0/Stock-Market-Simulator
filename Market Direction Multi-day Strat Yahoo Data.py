@@ -2,7 +2,7 @@ import csv
 import queue
 import matplotlib.pyplot as plt
 
-leverage = 1.0 #Edit to use leverage
+leverage = 2.0 #Edit to use leverage
 
 assetStartingValue = -1.0
 
@@ -87,14 +87,14 @@ while days.empty() == False:
         #---Strategy---
         if streakAndDirection >= 5:
             # Stay Out
-            #print("selling (" + str(sellCounter)+")")
-            #sellCounter+=1
-            #delta = delta - (((day.Close/previousClose)*1000)-1000)
+            print("selling (" + str(sellCounter)+")")
+            sellCounter+=1
+            delta = delta - (((day.Close/previousClose)*1000)-1000)
 
             # Buy inverse
-            currentCash = currentCash * (1+((day.Close/previousClose)-1)*-leverage)
-            print("selling and inversing (" + str(sellCounter)+")")
-            sellCounter+=1
+            #currentCash = currentCash * (1+((day.Close/previousClose)-1)*-leverage)
+            #print("selling and inversing (" + str(sellCounter)+")")
+            #sellCounter+=1
 
             # Only stay out of the days; stay in at night.
             #currentCash = currentCash * (1+((day.Open/previousClose)-1)*leverage)
@@ -183,4 +183,5 @@ plt.xlabel('')
 plt.ylabel('')
 print(results)
 print(leveragedResults)
+plt.legend()
 plt.show()
