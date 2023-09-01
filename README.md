@@ -1,5 +1,5 @@
 # Stock-Market-Simulator
-Some pythons scripts I used to try out stock market strategies against real data.
+Some python scripts I used to try out stock market strategies against real data.
 This isn't intended to be user-facing and so lacks a UI for changing files, strategy, etc.
 It uses matplotlib to visualize the market data and the performance of the strategy you script.
 If you want to play around with it, "Market Direction Multi-day Strat Yahoo Data" is the most advanced, and you can download more data from Yahoo Finance.
